@@ -15,15 +15,15 @@ export type GuidePage = {
   }>;
 };
 
-const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://zenjigsawmaster.com";
 
 export const siteConfig = {
   name: "Zen Jigsaw Master Online",
   brandLine: "A calm browser puzzle room built for long, low-stress sessions.",
   description:
-    "Play Zen Jigsaw Master online in a calm, distraction-light browser layout with fullscreen help, mobile tips, no-download access, and SEO-friendly support guides.",
+    "Play Zen Jigsaw Master online for free. This site is a simple browser home for a relaxing jigsaw puzzle game with nature-themed images, easy controls, fullscreen play, and no download required.",
   shortDescription:
-    "Play Zen Jigsaw Master online with a calm layout, quick controls, and helpful puzzle guides.",
+    "A simple browser home for Zen Jigsaw Master, a relaxing online jigsaw puzzle game.",
   siteUrl: rawSiteUrl.replace(/\/$/, ""),
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@example.com",
   themeColor: "#efe5d2",
