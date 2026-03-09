@@ -65,63 +65,35 @@ export default function HomePage() {
     <main className="page-main">
       <JsonLd data={schema} />
 
-      <section className="shell hero-grid">
-        <div className="hero-copy">
-          <p className="eyebrow">Calm browser puzzle</p>
-          <h1>Zen Jigsaw Master</h1>
-          <p>
-            Play Zen Jigsaw Master online in a quieter layout built for puzzle
-            lovers who want less portal noise and more room to focus. This page is
-            designed around the real search intent: launch the game fast, understand
-            how it feels, and find the right way to play on desktop or mobile.
-          </p>
-
-          <div className="hero-badges" aria-label="Core game features">
-            {siteConfig.game.features.map((feature) => (
-              <span key={feature}>{feature}</span>
-            ))}
-          </div>
-
-          <div className="hero-metrics" aria-label="Quick game facts">
-            <span>
-              <strong>Main keyword</strong>
-              zen jigsaw master
-            </span>
-            <span>
-              <strong>Search intent</strong>
-              play online now
-            </span>
-            <span>
-              <strong>Best session</strong>
-              five to fifteen minutes
-            </span>
-          </div>
-        </div>
-
-        <aside className="hero-aside">
-          <p className="eyebrow">Why this landing page exists</p>
-          <h2>One game, one intent, no clutter.</h2>
-          <ul>
-            <li>
-              <strong>Fast entry:</strong> the iframe is visible immediately so the
-              page behaves like a single-game site, not a crowded library.
-            </li>
-            <li>
-              <strong>Keyword coverage:</strong> we support long-tail intents such as
-              fullscreen play, mobile use, no-download access, and practical tips.
-            </li>
-            <li>
-              <strong>Game fit:</strong> the visual direction uses paper, stone, moss,
-              and gallery-like spacing to match the game's peaceful jigsaw mood.
-            </li>
-          </ul>
-        </aside>
-      </section>
-
-      <section className="shell section play-grid" id="play">
+      <section className="shell play-grid play-grid--hero" id="play">
         <GameFrame src={siteConfig.game.embedUrl} title={siteConfig.game.title} />
 
         <div className="sticky-stack">
+          <div className="guide-note guide-note--hero">
+            <p className="eyebrow">Calm browser puzzle</p>
+            <h1>Zen Jigsaw Master</h1>
+            <p>
+              Play Zen Jigsaw Master online right away in a layout that puts the game
+              first. The page is intentionally compact up top so players land on the
+              puzzle instead of a wall of text.
+            </p>
+            <div className="hero-badges" aria-label="Core game features">
+              {siteConfig.game.features.map((feature) => (
+                <span key={feature}>{feature}</span>
+              ))}
+            </div>
+            <div className="hero-metrics hero-metrics--compact" aria-label="Quick game facts">
+              <span>
+                <strong>Main keyword</strong>
+                zen jigsaw master
+              </span>
+              <span>
+                <strong>Search intent</strong>
+                play online now
+              </span>
+            </div>
+          </div>
+
           <div className="guide-note">
             <p className="eyebrow">Player profile</p>
             <h2>Best for quiet breaks</h2>
@@ -148,6 +120,52 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="shell section hero-grid hero-grid--support">
+        <div className="hero-copy hero-copy--compact">
+          <p className="eyebrow">Why this landing page exists</p>
+          <h2>One game, one intent, no clutter.</h2>
+          <p>
+            Play Zen Jigsaw Master online in a quieter layout built for puzzle
+            lovers who want less portal noise and more room to focus. This page is
+            designed around the real search intent: launch the game fast, understand
+            how it feels, and find the right way to play on desktop or mobile.
+          </p>
+          <div className="hero-metrics" aria-label="Quick game facts">
+            <span>
+              <strong>Best session</strong>
+              five to fifteen minutes
+            </span>
+            <span>
+              <strong>Play style</strong>
+              single-player calm puzzle
+            </span>
+            <span>
+              <strong>Device fit</strong>
+              desktop and mobile browser
+            </span>
+          </div>
+        </div>
+
+        <aside className="hero-aside">
+          <p className="eyebrow">Game fit</p>
+          <h2>Built around the way this puzzle feels.</h2>
+          <ul>
+            <li>
+              <strong>Fast entry:</strong> the iframe stays above the fold on desktop
+              so the page behaves like a real single-game site.
+            </li>
+            <li>
+              <strong>Keyword coverage:</strong> we support long-tail intents such as
+              fullscreen play, mobile use, no-download access, and practical tips.
+            </li>
+            <li>
+              <strong>Game fit:</strong> the visual direction uses paper, stone, moss,
+              and gallery-like spacing to match the game's peaceful jigsaw mood.
+            </li>
+          </ul>
+        </aside>
       </section>
 
       <section className="shell section">

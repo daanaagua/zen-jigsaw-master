@@ -111,7 +111,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </div>
       </section>
 
-      <section className="shell section play-grid">
+      <section className="shell section play-grid play-grid--hero play-grid--guide">
         <GameFrame src={siteConfig.game.embedUrl} title={siteConfig.game.title} />
 
         <aside className="sticky-stack">

@@ -182,6 +182,11 @@ button {
   padding: 2rem 0 1.75rem;
 }
 
+.hero-grid--support {
+  align-items: start;
+  padding-top: 1.2rem;
+}
+
 .hero-copy,
 .hero-aside,
 .content-card,
@@ -241,6 +246,25 @@ button {
   margin: 0.65rem 0 0.8rem;
   font-size: clamp(2.8rem, 5vw, 5rem);
   line-height: 0.95;
+}
+
+.guide-note h1,
+.hero-copy h2,
+.hero-aside h2 {
+  margin: 0.45rem 0 0.7rem;
+  font-family: var(--font-display), serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.guide-note h1 {
+  font-size: clamp(2.2rem, 3vw, 3.4rem);
+}
+
+.hero-copy h2,
+.hero-aside h2 {
+  font-size: clamp(2rem, 2.8vw, 3rem);
 }
 
 .hero-copy p,
@@ -337,6 +361,11 @@ button {
   align-items: start;
 }
 
+.play-grid--hero {
+  grid-template-columns: minmax(0, 1.75fr) minmax(18rem, 0.72fr);
+  align-items: start;
+}
+
 .frame-shell {
   padding: 1rem;
 }
@@ -391,6 +420,15 @@ button {
   background: linear-gradient(160deg, #f6eddf, #e8dfce);
 }
 
+.play-grid--hero .frame-stage {
+  aspect-ratio: 16 / 10;
+  min-height: clamp(560px, 72vh, 920px);
+}
+
+.play-grid--guide .frame-stage {
+  min-height: clamp(520px, 68vh, 860px);
+}
+
 .frame-stage iframe {
   width: 100%;
   height: 100%;
@@ -422,6 +460,14 @@ button {
   gap: 1rem;
   position: sticky;
   top: 6.2rem;
+}
+
+.hero-metrics--compact {
+  margin-top: 1rem;
+}
+
+.hero-copy--compact {
+  padding-top: 1.3rem;
 }
 
 .content-grid,
@@ -591,6 +637,12 @@ button {
   .guide-hero h1,
   .plain-page h1 {
     font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .play-grid--hero .frame-stage,
+  .play-grid--guide .frame-stage {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
   }
 }
 
