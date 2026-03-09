@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { IBM_Plex_Sans, Cormorant_Garamond } from "next/font/google";
+import Script from "next/script";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -66,6 +67,18 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en">
       <body className={`${bodyFont.variable} ${displayFont.variable}`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Z2EB7TQVRN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Z2EB7TQVRN');
+          `}
+        </Script>
         <div className="site-chrome">
           <SiteHeader />
           {children}

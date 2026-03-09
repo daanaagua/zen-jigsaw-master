@@ -1,11 +1,18 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="36" fill="url(#paint0_linear_1_2)"/>
-  <path d="M33 39H95L74 64L95 89H33L54 64L33 39Z" fill="#FFF9F1" fill-opacity="0.94"/>
-  <circle cx="64" cy="64" r="10" fill="#D7BE95"/>
+  <rect width="128" height="128" rx="34" fill="url(#bg)"/>
+  <rect x="18" y="18" width="92" height="92" rx="28" fill="url(#panel)" fill-opacity="0.94"/>
+  <path d="M64 34C47.4315 34 34 47.4315 34 64H47.5C47.5 54.8873 54.8873 47.5 64 47.5C73.1127 47.5 80.5 54.8873 80.5 64C80.5 73.1127 73.1127 80.5 64 80.5C59.1424 80.5 54.7752 78.401 51.7547 75.0588L63.5 63.5H48.5V78.5L42.4378 72.5333C39.031 67.9804 37 62.3271 37 56.2C37 43.387 47.387 33 60.2 33H64V34Z" fill="#4E644B"/>
+  <path d="M77.5 39.5H89.2C92.9555 39.5 96 42.5445 96 46.3V58L86.8 52.6667L77.5 58V39.5Z" fill="#C68769"/>
+  <circle cx="89.2" cy="46.3" r="3.2" fill="#FFF8EE"/>
+  <path d="M64 31.5C46.0507 31.5 31.5 46.0507 31.5 64C31.5 81.9493 46.0507 96.5 64 96.5C81.9493 96.5 96.5 81.9493 96.5 64" stroke="#FFF8EE" stroke-width="5" stroke-linecap="round" stroke-opacity="0.88"/>
   <defs>
-    <linearGradient id="paint0_linear_1_2" x1="19" y1="16" x2="111" y2="112" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#536B4F"/>
-      <stop offset="1" stop-color="#C48366"/>
+    <linearGradient id="bg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F694D"/>
+      <stop offset="1" stop-color="#C68769"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="31" y1="22" x2="98" y2="107" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF5EA"/>
+      <stop offset="1" stop-color="#F0E1CD"/>
     </linearGradient>
   </defs>
 </svg>
