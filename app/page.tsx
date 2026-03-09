@@ -65,64 +65,68 @@ export default function HomePage() {
     <main className="page-main">
       <JsonLd data={schema} />
 
-      <section className="shell play-grid play-grid--hero" id="play">
+      <section className="shell shell--game" id="play">
         <GameFrame src={siteConfig.game.embedUrl} title={siteConfig.game.title} />
+      </section>
 
-        <div className="sticky-stack">
-          <div className="guide-note guide-note--hero">
-            <p className="eyebrow">Calm browser puzzle</p>
-            <h1>Zen Jigsaw Master</h1>
-            <p>
-              Play Zen Jigsaw Master online right away in a layout that puts the game
-              first. The page is intentionally compact up top so players land on the
-              puzzle instead of a wall of text.
-            </p>
-            <div className="hero-badges" aria-label="Core game features">
-              {siteConfig.game.features.map((feature) => (
-                <span key={feature}>{feature}</span>
-              ))}
-            </div>
-            <div className="hero-metrics hero-metrics--compact" aria-label="Quick game facts">
-              <span>
-                <strong>Main keyword</strong>
-                zen jigsaw master
-              </span>
-              <span>
-                <strong>Search intent</strong>
-                play online now
-              </span>
-            </div>
+      <section className="shell section hero-grid hero-grid--support hero-grid--triad">
+        <div className="hero-copy hero-copy--compact">
+          <p className="eyebrow">Calm browser puzzle</p>
+          <h1>Zen Jigsaw Master</h1>
+          <p>
+            Play Zen Jigsaw Master online right away in a layout that puts the game
+            first. The page is intentionally compact up top so players land on the
+            puzzle immediately instead of scrolling through oversized title blocks.
+          </p>
+          <div className="hero-badges" aria-label="Core game features">
+            {siteConfig.game.features.map((feature) => (
+              <span key={feature}>{feature}</span>
+            ))}
           </div>
-
-          <div className="guide-note">
-            <p className="eyebrow">Player profile</p>
-            <h2>Best for quiet breaks</h2>
-            <ul className="profile-list">
-              {siteConfig.game.profile.map((item) => (
-                <li key={item.label}>
-                  <strong>{item.label}</strong>
-                  {item.value}
-                </li>
-              ))}
-            </ul>
+          <div className="hero-metrics hero-metrics--compact" aria-label="Quick game facts">
+            <span>
+              <strong>Main keyword</strong>
+              zen jigsaw master
+            </span>
+            <span>
+              <strong>Search intent</strong>
+              play online now
+            </span>
+            <span>
+              <strong>Best session</strong>
+              five to fifteen minutes
+            </span>
           </div>
+        </div>
 
-          <div className="guide-note" id="guides">
-            <p className="eyebrow">Intent-driven guides</p>
-            <h2>Search paths we cover</h2>
-            <div className="guide-links">
-              {siteConfig.quickLinks.map((link) => (
-                <Link className="key-link" href={link.href} key={link.href}>
-                  <strong>{link.label}</strong>
-                  <p>{link.note}</p>
-                </Link>
-              ))}
-            </div>
+        <div className="guide-note">
+          <p className="eyebrow">Player profile</p>
+          <h2>Best for quiet breaks</h2>
+          <ul className="profile-list">
+            {siteConfig.game.profile.map((item) => (
+              <li key={item.label}>
+                <strong>{item.label}</strong>
+                {item.value}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="guide-note" id="guides">
+          <p className="eyebrow">Intent-driven guides</p>
+          <h2>Search paths we cover</h2>
+          <div className="guide-links">
+            {siteConfig.quickLinks.map((link) => (
+              <Link className="key-link" href={link.href} key={link.href}>
+                <strong>{link.label}</strong>
+                <p>{link.note}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="shell section hero-grid hero-grid--support">
+      <section className="shell section hero-grid hero-grid--info">
         <div className="hero-copy hero-copy--compact">
           <p className="eyebrow">Why this landing page exists</p>
           <h2>One game, one intent, no clutter.</h2>

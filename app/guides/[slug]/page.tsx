@@ -111,34 +111,34 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </div>
       </section>
 
-      <section className="shell section play-grid play-grid--hero play-grid--guide">
+      <section className="shell shell--game section">
         <GameFrame src={siteConfig.game.embedUrl} title={siteConfig.game.title} />
+      </section>
 
-        <aside className="sticky-stack">
-          <div className="guide-note">
-            <p className="eyebrow">Guide focus</p>
-            <h2>{guide.hero}</h2>
-            <p>{guide.intro}</p>
-            <Link className="primary-link" href="/">
-              Back to the main game page
-            </Link>
-          </div>
+      <section className="shell section hero-grid hero-grid--support hero-grid--guide-support">
+        <div className="guide-note">
+          <p className="eyebrow">Guide focus</p>
+          <h2>{guide.hero}</h2>
+          <p>{guide.intro}</p>
+          <Link className="primary-link" href="/">
+            Back to the main game page
+          </Link>
+        </div>
 
-          <div className="guide-note">
-            <p className="eyebrow">More support pages</p>
-            <h2>Keep the internal links working</h2>
-            <div className="guide-links">
-              {siteConfig.quickLinks
-                .filter((link) => !link.href.endsWith(guide.slug))
-                .map((link) => (
-                  <Link className="key-link" href={link.href} key={link.href}>
-                    <strong>{link.label}</strong>
-                    <p>{link.note}</p>
-                  </Link>
-                ))}
-            </div>
+        <div className="guide-note">
+          <p className="eyebrow">More support pages</p>
+          <h2>Keep the internal links working</h2>
+          <div className="guide-links">
+            {siteConfig.quickLinks
+              .filter((link) => !link.href.endsWith(guide.slug))
+              .map((link) => (
+                <Link className="key-link" href={link.href} key={link.href}>
+                  <strong>{link.label}</strong>
+                  <p>{link.note}</p>
+                </Link>
+              ))}
           </div>
-        </aside>
+        </div>
       </section>
 
       <section className="shell section guide-layout">
