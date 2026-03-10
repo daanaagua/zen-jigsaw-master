@@ -15,7 +15,7 @@ export default function HomePage() {
       genre: siteConfig.game.genre,
       applicationCategory: "Game",
       operatingSystem: "Any",
-      image: absoluteUrl("/opengraph-image"),
+      image: absoluteUrl(siteConfig.socialImage),
       gamePlatform: siteConfig.game.devices,
       playMode: "SinglePlayer",
       isAccessibleForFree: true,

@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: absoluteUrl("/opengraph-image"),
+        url: absoluteUrl(siteConfig.socialImage),
         width: 1200,
         height: 630,
-        alt: "Zen Jigsaw Master Online",
+        alt: "Zen Jigsaw Master gameplay screenshot",
       },
     ],
   },
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Zen Jigsaw Master - Play Online for Free",
     description: siteConfig.description,
-    images: [absoluteUrl("/twitter-image")],
+    images: [absoluteUrl(siteConfig.socialImage)],
   },
 };
 

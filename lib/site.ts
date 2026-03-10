@@ -25,6 +25,7 @@ export const siteConfig = {
   shortDescription:
     "Play Zen Jigsaw Master online in a simple browser-first puzzle site.",
   siteUrl: rawSiteUrl.replace(/\/$/, ""),
+  socialImage: "/images/zen-jigsaw-master-cover.png",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@example.com",
   themeColor: "#efe5d2",
   game: {

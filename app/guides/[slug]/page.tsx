@@ -47,7 +47,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
       "@type": "Article",
       headline: guide.title,
       description: guide.description,
-      image: absoluteUrl("/opengraph-image"),
+      image: absoluteUrl(siteConfig.socialImage),
       author: {
         "@type": "Organization",
         name: siteConfig.name,
