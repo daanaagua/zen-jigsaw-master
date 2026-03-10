@@ -24,21 +24,21 @@ const displayFont = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Zen Jigsaw Master - Play Online in a Calm Puzzle Room",
+    default: "Zen Jigsaw Master - Play Online for Free",
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   alternates: {
     canonical: absoluteUrl("/"),
   },
-  keywords: siteConfig.keywordCluster,
+  keywords: siteConfig.metaKeywords,
   applicationName: siteConfig.name,
   category: "games",
   openGraph: {
     type: "website",
     url: absoluteUrl("/"),
     siteName: siteConfig.name,
-    title: "Zen Jigsaw Master - Play Online in a Calm Puzzle Room",
+    title: "Zen Jigsaw Master - Play Online for Free",
     description: siteConfig.description,
     images: [
       {
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Zen Jigsaw Master - Play Online in a Calm Puzzle Room",
+    title: "Zen Jigsaw Master - Play Online for Free",
     description: siteConfig.description,
     images: [absoluteUrl("/twitter-image")],
   },

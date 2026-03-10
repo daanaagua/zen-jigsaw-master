@@ -74,9 +74,9 @@ export default function HomePage() {
           <p className="eyebrow">Calm browser puzzle</p>
           <h1>Zen Jigsaw Master</h1>
           <p>
-            Play Zen Jigsaw Master online right away in a layout that puts the game
-            first. The page is intentionally compact up top so players land on the
-            puzzle immediately instead of scrolling through oversized title blocks.
+            Zen Jigsaw Master is a relaxing online jigsaw puzzle game you can play for
+            free in your browser. Open the game instantly, switch to fullscreen, and
+            enjoy calm nature-themed puzzles on desktop or mobile.
           </p>
           <div className="hero-badges" aria-label="Core game features">
             {siteConfig.game.features.map((feature) => (
@@ -131,10 +131,10 @@ export default function HomePage() {
           <p className="eyebrow">Why this landing page exists</p>
           <h2>One game, one intent, no clutter.</h2>
           <p>
-            Play Zen Jigsaw Master online in a quieter layout built for puzzle
-            lovers who want less portal noise and more room to focus. This page is
-            designed around the real search intent: launch the game fast, understand
-            how it feels, and find the right way to play on desktop or mobile.
+            This homepage is the main destination for players who search for Zen
+            Jigsaw Master and want to play immediately. The goal is simple: launch the
+            game fast, explain what it is, and send deeper mobile or fullscreen
+            questions to dedicated guide pages.
           </p>
           <div className="hero-metrics" aria-label="Quick game facts">
             <span>

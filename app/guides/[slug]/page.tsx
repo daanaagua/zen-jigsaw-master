@@ -121,7 +121,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
           <h2>{guide.hero}</h2>
           <p>{guide.intro}</p>
           <Link className="primary-link" href="/">
-            Back to the main game page
+            Play Zen Jigsaw Master Online
           </Link>
         </div>
 

@@ -21,9 +21,9 @@ export const siteConfig = {
   name: "Zen Jigsaw Master Online",
   brandLine: "A calm browser puzzle room built for long, low-stress sessions.",
   description:
-    "Play Zen Jigsaw Master online for free. This site is a simple browser home for a relaxing jigsaw puzzle game with nature-themed images, easy controls, fullscreen play, and no download required.",
+    "Play Zen Jigsaw Master online for free in your browser. Enjoy a relaxing jigsaw puzzle game with fullscreen support, mobile play, and no download.",
   shortDescription:
-    "A simple browser home for Zen Jigsaw Master, a relaxing online jigsaw puzzle game.",
+    "Play Zen Jigsaw Master online in a simple browser-first puzzle site.",
   siteUrl: rawSiteUrl.replace(/\/$/, ""),
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@example.com",
   themeColor: "#efe5d2",
@@ -49,6 +49,12 @@ export const siteConfig = {
       { label: "Session length", value: "5 to 15 minutes" },
     ],
   },
+  metaKeywords: [
+    "zen jigsaw master",
+    "play zen jigsaw master",
+    "zen jigsaw master mobile",
+    "zen jigsaw master fullscreen",
+  ],
   keywordCluster: [
     "zen jigsaw master",
     "play zen jigsaw master online",
@@ -88,12 +94,12 @@ export const siteConfig = {
 export const guidePages: GuidePage[] = [
   {
     slug: "zen-jigsaw-master-fullscreen",
-    title: "Zen Jigsaw Master Fullscreen Guide",
+    title: "How to Play Zen Jigsaw Master in Fullscreen",
     description:
-      "Use Zen Jigsaw Master in fullscreen mode with cleaner focus, fewer distractions, and better visibility for larger puzzle boards.",
+      "Learn how to play Zen Jigsaw Master in fullscreen for a larger board, fewer distractions, and a more comfortable puzzle session.",
     hero: "Play Zen Jigsaw Master in fullscreen for a more gallery-like puzzle session.",
     intro:
-      "This guide is for players who want Zen Jigsaw Master to feel less like a random web embed and more like a dedicated puzzle room. Fullscreen mode works best when you want to settle in, hide visual clutter, and treat the game as a focused break instead of a quick click.",
+      "If you want Zen Jigsaw Master to feel more immersive on desktop, fullscreen mode is the best setup. This guide explains how to get a larger board, reduce distractions, and keep the puzzle session comfortable.",
     keywords: [
       "zen jigsaw master fullscreen",
       "zen jigsaw master full screen",
@@ -137,12 +143,12 @@ export const guidePages: GuidePage[] = [
   },
   {
     slug: "zen-jigsaw-master-mobile",
-    title: "Zen Jigsaw Master Mobile Guide",
+    title: "How to Play Zen Jigsaw Master on Mobile",
     description:
-      "Learn how to play Zen Jigsaw Master on mobile with smoother touch controls, better orientation choices, and easier short-session puzzle habits.",
+      "Play Zen Jigsaw Master on mobile with better touch controls, landscape mode, and simple setup tips for phones and tablets.",
     hero: "Zen Jigsaw Master mobile play works best when you lean into short, touch-first sessions.",
     intro:
-      "Zen Jigsaw Master is well suited to mobile because the game loop is slow, visual, and forgiving. It does not demand twitch inputs, so a phone or tablet can still feel comfortable as long as you set up the board with enough room for dragging and scanning.",
+      "If you want to play Zen Jigsaw Master on a phone or tablet, this guide explains the best setup, orientation, and touch habits for smoother mobile sessions.",
     keywords: [
       "zen jigsaw master mobile",
       "play zen jigsaw master on phone",
@@ -186,12 +192,12 @@ export const guidePages: GuidePage[] = [
   },
   {
     slug: "zen-jigsaw-master-no-download",
-    title: "Zen Jigsaw Master No Download",
+    title: "Play Zen Jigsaw Master with No Download",
     description:
-      "Play Zen Jigsaw Master with no download, no install, and no account. Open the browser page, launch the embed, and start a calm jigsaw session right away.",
+      "Play Zen Jigsaw Master with no download or install. Open the browser page and start a relaxing puzzle session right away.",
     hero: "Zen Jigsaw Master no download play is one of the strongest reasons to build a dedicated landing page for it.",
     intro:
-      "Many puzzle fans do not want another app, launcher, or account. They just want a browser tab that opens quickly and gets out of the way. That is where Zen Jigsaw Master works well: the game loads in-page, needs almost no setup, and is easy to revisit whenever you want a gentle puzzle break.",
+      "If you want Zen Jigsaw Master without downloads, installs, or signups, browser play is the simplest route. This guide focuses on instant access and what to expect from the no-download version.",
     keywords: [
       "zen jigsaw master no download",
       "play zen jigsaw master online free",
@@ -235,12 +241,12 @@ export const guidePages: GuidePage[] = [
   },
   {
     slug: "zen-jigsaw-master-tips",
-    title: "Zen Jigsaw Master Tips",
+    title: "Zen Jigsaw Master Tips for Smoother Puzzles",
     description:
-      "Use these Zen Jigsaw Master tips to organize the board, spot useful piece patterns, and keep the game feeling calm instead of frustrating.",
+      "Use Zen Jigsaw Master tips to sort pieces, read image patterns, and keep each puzzle session calm and frustration-free.",
     hero: "Zen Jigsaw Master tips are less about speed and more about keeping the puzzle flow gentle.",
     intro:
-      "Because Zen Jigsaw Master is a mood-driven puzzle game, the best strategy is not to rush. A good session feels smooth, visual, and almost meditative. These tips are meant to reduce friction, not turn the game into a competitive checklist.",
+      "If you want Zen Jigsaw Master to feel smoother and less frustrating, the key is simple piece sorting, image reading, and a calmer pace. These tips focus on puzzle flow rather than speed.",
     keywords: [
       "zen jigsaw master tips",
       "how to play zen jigsaw master",
