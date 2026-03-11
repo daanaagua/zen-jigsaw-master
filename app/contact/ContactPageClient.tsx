@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 
+const TALLY_TOP_CROP = 84;
+
 type ContactPageClientProps = {
   contactEmail: string;
   tallyUrl?: string;
@@ -33,9 +35,15 @@ export default function ContactPageClient({ contactEmail, tallyUrl }: ContactPag
     function handleMessage(event: MessageEvent) {
       if (typeof event.data === "object" && event.data?.event === "Tally.FormHeightChanged") {
         const iframe = document.getElementById("tally-iframe") as HTMLIFrameElement | null;
+        const frameShell = document.getElementById("tally-shell") as HTMLDivElement | null;
 
         if (iframe) {
           iframe.style.height = `${event.data.height}px`;
+          iframe.style.marginTop = `-${TALLY_TOP_CROP}px`;
+        }
+
+        if (frameShell) {
+          frameShell.style.height = `${Math.max(event.data.height - TALLY_TOP_CROP, 320)}px`;
         }
       }
     }
@@ -57,22 +65,36 @@ export default function ContactPageClient({ contactEmail, tallyUrl }: ContactPag
 
           {embedUrl ? (
             <>
-              <iframe
-                id="tally-iframe"
-                src={embedUrl}
-                width="100%"
-                height="320"
-                frameBorder={0}
-                marginHeight={0}
-                marginWidth={0}
-                title="Contact form"
+              <div
+                id="tally-shell"
                 style={{
-                  border: "none",
+                  marginTop: "1.4rem",
                   minHeight: "320px",
-                  display: "block",
-                  background: "transparent",
+                  overflow: "hidden",
+                  borderRadius: "24px",
+                  background: "rgba(255, 251, 245, 0.6)",
+                  border: "1px solid rgba(77, 62, 45, 0.1)",
                 }}
-              />
+              >
+                <iframe
+                  id="tally-iframe"
+                  src={embedUrl}
+                  width="100%"
+                  height="404"
+                  frameBorder={0}
+                  marginHeight={0}
+                  marginWidth={0}
+                  scrolling="no"
+                  title="Contact form"
+                  style={{
+                    border: "none",
+                    minHeight: `${320 + TALLY_TOP_CROP}px`,
+                    display: "block",
+                    background: "transparent",
+                    marginTop: `-${TALLY_TOP_CROP}px`,
+                  }}
+                />
+              </div>
               <p className="center-note">
                 The embedded form is configured to show only your Name, Email, and
                 Message fields. Prefer email instead?{" "}
