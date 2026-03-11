@@ -27,6 +27,7 @@ export const siteConfig = {
   siteUrl: rawSiteUrl.replace(/\/$/, ""),
   socialImage: "/images/zen-jigsaw-master-cover.png",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@example.com",
+  tallyContactFormUrl: process.env.NEXT_PUBLIC_TALLY_CONTACT_FORM_URL || "",
   themeColor: "#efe5d2",
   game: {
     title: "Zen Jigsaw Master",

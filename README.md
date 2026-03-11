@@ -58,6 +58,7 @@ Set these values in Vercel before going live:
 
 - `NEXT_PUBLIC_SITE_URL`
 - `NEXT_PUBLIC_CONTACT_EMAIL`
+- `NEXT_PUBLIC_TALLY_CONTACT_FORM_URL`
 
 ## Notes
 
