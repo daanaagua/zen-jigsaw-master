@@ -60,6 +60,9 @@ Set these values in Vercel before going live:
 - `NEXT_PUBLIC_CONTACT_EMAIL`
 - `NEXT_PUBLIC_TALLY_CONTACT_FORM_URL`
 
+The Tally embed options for hidden title, transparent background, left alignment,
+and dynamic height are added automatically by the contact page.
+
 ## Notes
 
 - This repository focuses on the website experience and SEO structure around the game.

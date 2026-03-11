@@ -7,7 +7,28 @@ type ContactPageClientProps = {
   tallyUrl?: string;
 };
 
+function buildTallyEmbedUrl(input?: string) {
+  if (!input) {
+    return "";
+  }
+
+  try {
+    const url = new URL(input);
+
+    url.searchParams.set("alignLeft", "1");
+    url.searchParams.set("hideTitle", "1");
+    url.searchParams.set("transparentBackground", "1");
+    url.searchParams.set("dynamicHeight", "1");
+
+    return url.toString();
+  } catch {
+    return input;
+  }
+}
+
 export default function ContactPageClient({ contactEmail, tallyUrl }: ContactPageClientProps) {
+  const embedUrl = buildTallyEmbedUrl(tallyUrl);
+
   useEffect(() => {
     function handleMessage(event: MessageEvent) {
       if (typeof event.data === "object" && event.data?.event === "Tally.FormHeightChanged") {
@@ -30,16 +51,15 @@ export default function ContactPageClient({ contactEmail, tallyUrl }: ContactPag
           <p className="plain-kicker">Contact</p>
           <h1>Get in touch</h1>
           <p>
-            Use the contact form for feedback, licensing questions, bug reports,
-            takedown requests, or business inquiries related to Zen Jigsaw Master
-            Online.
+            Send a quick message about licensing, corrections, partnership ideas,
+            technical issues, or general feedback related to Zen Jigsaw Master Online.
           </p>
 
-          {tallyUrl ? (
+          {embedUrl ? (
             <>
               <iframe
                 id="tally-iframe"
-                src={tallyUrl}
+                src={embedUrl}
                 width="100%"
                 height="320"
                 frameBorder={0}
@@ -54,16 +74,17 @@ export default function ContactPageClient({ contactEmail, tallyUrl }: ContactPag
                 }}
               />
               <p className="center-note">
-                Prefer email?{" "}
+                The embedded form is configured to show only your Name, Email, and
+                Message fields. Prefer email instead?{" "}
                 <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
               </p>
             </>
           ) : (
             <>
               <p>
-                The Tally contact form is not configured yet. Add your form embed URL
-                to <code>NEXT_PUBLIC_TALLY_CONTACT_FORM_URL</code> in Vercel to enable
-                submissions on this page.
+                The contact form is not configured yet. Add your Tally form URL to
+                <code> NEXT_PUBLIC_TALLY_CONTACT_FORM_URL </code>
+                in Vercel to enable submissions on this page.
               </p>
               <p className="center-note">
                 Current fallback email: <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
